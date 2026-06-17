@@ -1,17 +1,19 @@
 import { ShieldCheck, Mail, Phone, Network, ExternalLink } from 'lucide-react';
 
-export default function Footer() {
+interface FooterProps {
+  onNavigate: (page: 'privacy' | 'terms') => void;
+}
+
+export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-slate-100 border-t border-slate-200 pt-16 pb-8 relative z-10 overflow-hidden">
       
-      {/* Footer background ambient tint */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-50/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-slate-200">
           
-          {/* Logo brand & description column */}
           <div className="col-span-1 md:col-span-2 space-y-4">
             <a href="#home" className="flex items-center space-x-2 group">
               <div className="w-8 h-8 flex items-center justify-center bg-blue-50 border border-blue-200 rounded-lg group-hover:border-blue-400 transition-colors">
@@ -31,7 +33,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick interactive shortcuts */}
           <div className="space-y-4">
             <h4 className="text-xs font-mono font-bold tracking-widest text-blue-600 uppercase">Tecnologias</h4>
             <ul className="space-y-2 text-xs">
@@ -43,7 +44,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Real Portuguese Contact Info */}
           <div className="space-y-4">
             <h4 className="text-xs font-mono font-bold tracking-widest text-blue-600 uppercase">Fale Conosco</h4>
             <ul className="space-y-2.5 text-xs text-slate-500">
@@ -60,19 +60,24 @@ export default function Footer() {
 
         </div>
 
-        {/* Footer legal & copyright info panel */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[10px] text-slate-400 font-mono font-bold">
             © {new Date().getFullYear()} LIMAS IT. Todos os direitos reservados.
           </p>
           <div className="flex items-center space-x-4 text-[10px] text-slate-400 font-mono font-bold">
-            <span className="hover:text-blue-600 transition-colors flex items-center space-x-1 cursor-pointer">
-              <span>Políticas de Privacidade</span>
-            </span>
+            <button
+              onClick={() => onNavigate('privacy')}
+              className="hover:text-blue-600 transition-colors cursor-pointer"
+            >
+              Políticas de Privacidade
+            </button>
             <span>•</span>
-            <span className="hover:text-blue-600 transition-colors flex items-center space-x-1 cursor-pointer">
-              <span>Termos de Uso</span>
-            </span>
+            <button
+              onClick={() => onNavigate('terms')}
+              className="hover:text-blue-600 transition-colors cursor-pointer"
+            >
+              Termos de Uso
+            </button>
           </div>
         </div>
 
