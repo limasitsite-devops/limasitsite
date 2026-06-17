@@ -67,14 +67,8 @@ export default function Hero() {
                 href="#simulator"
                 className="flex items-center justify-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white font-bold px-7 py-4 rounded-xl text-base transition-all shadow-md hover:scale-[1.01] cursor-pointer"
               >
-                <span>Simulador de Infraestrutura</span>
-                <ArrowRight className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#services"
-                className="flex items-center justify-center space-x-2 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold px-7 py-4 rounded-xl text-base transition-all shadow-sm cursor-pointer"
-              >
                 <span>Conhecer Soluções</span>
+                <ArrowRight className="w-5 h-5 text-white" />
               </a>
             </motion.div>
 
