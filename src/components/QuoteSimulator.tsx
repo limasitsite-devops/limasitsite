@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Send, Loader2, CheckCircle, ChevronDown } from 'lucide-react';
 
@@ -14,12 +14,24 @@ export default function QuoteSimulator() {
   const [notes, setNotes] = useState('');
 
   const services = [
-    'Defesa e Cybersegurança corporativa',
-    'Redes e cabeamento estruturado',
-    'Datacenter',
-    'Nuvem e virtualização',
-    'Recuperação, backup e disponibilidade'
+    'Defesa e Cybersegurança Corporativa',
+    'Redes e Cabeamento Estruturado',
+    'Datacenter, Nuvem e Virtualização',
+    'Recuperação, Backup e Disponibilidade'
   ];
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    const queryIndex = hash.indexOf('?');
+    if (queryIndex !== -1) {
+      const params = new URLSearchParams(hash.substring(queryIndex));
+      const serviceParam = params.get('service');
+      if (serviceParam) {
+        const matched = services.find(s => s.toLowerCase() === serviceParam.toLowerCase());
+        if (matched) setService(matched);
+      }
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
