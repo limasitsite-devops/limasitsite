@@ -51,7 +51,7 @@ export default function Header({ onAdminToggle, isAdminOpen }: HeaderProps) {
           </div>
           <div className="flex flex-col">
             <span className="font-display font-extrabold tracking-tight text-xl text-slate-800 uppercase">
-              LIMAS <span className="text-blue-600 italic">IT</span>
+              LIMAS <span className="text-blue-600">IT</span>
             </span>
             <span className="text-[9px] font-mono tracking-[4px] text-slate-400 uppercase -mt-1 block font-bold">
               Soluções em TI

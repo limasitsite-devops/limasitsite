@@ -88,7 +88,7 @@ export default function Hero() {
                 <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Uptime de Redes</p>
               </div>
               <div>
-                <p className="text-2xl font-black text-slate-900 font-display">24/7/365</p>
+                <p className="text-2xl font-black text-slate-900 font-display">24/7</p>
                 <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Monitoramento</p>
               </div>
               <div>
