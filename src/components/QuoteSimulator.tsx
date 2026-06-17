@@ -181,7 +181,7 @@ export default function QuoteSimulator() {
                         id="companyName"
                         type="text"
                         required
-                        placeholder="Ex: Hospital Memorial, Redes LTDA"
+                        placeholder="Ex: TechCorp Brasil LTDA"
                         value={companyName}
                         onChange={(e) => setCompanyName(e.target.value)}
                         className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors placeholder:text-slate-400"
@@ -194,7 +194,7 @@ export default function QuoteSimulator() {
                         id="contactName"
                         type="text"
                         required
-                        placeholder="Ex: Dr. Joardan Nascimento"
+                        placeholder="Ex: Carlos Silva"
                         value={contactName}
                         onChange={(e) => setContactName(e.target.value)}
                         className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors placeholder:text-slate-400"
@@ -207,7 +207,7 @@ export default function QuoteSimulator() {
                         id="email"
                         type="email"
                         required
-                        placeholder="Ex: joardan.nascimento@memorial.com"
+                        placeholder="Ex: contato@techcorp.com.br"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors placeholder:text-slate-400"
@@ -220,7 +220,7 @@ export default function QuoteSimulator() {
                         id="phone"
                         type="tel"
                         required
-                        placeholder="Ex: (81) 98888-8888"
+                        placeholder="Ex: (11) 99999-9999"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors placeholder:text-slate-400"
