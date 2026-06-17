@@ -21,16 +21,17 @@ export default function QuoteSimulator() {
   ];
 
   useEffect(() => {
-    const hash = window.location.hash;
-    const queryIndex = hash.indexOf('?');
-    if (queryIndex !== -1) {
-      const params = new URLSearchParams(hash.substring(queryIndex));
-      const serviceParam = params.get('service');
-      if (serviceParam) {
-        const matched = services.find(s => s.toLowerCase() === serviceParam.toLowerCase());
+    const readService = () => {
+      const saved = localStorage.getItem('selectedService');
+      if (saved) {
+        const matched = services.find(s => s.toLowerCase() === saved.toLowerCase());
         if (matched) setService(matched);
+        localStorage.removeItem('selectedService');
       }
-    }
+    };
+    readService();
+    window.addEventListener('hashchange', readService);
+    return () => window.removeEventListener('hashchange', readService);
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {

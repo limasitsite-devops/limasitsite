@@ -252,7 +252,12 @@ export default function Services() {
                   {/* CTA connection to Simulator */}
                   <div className="pt-6">
                     <a
-                      href={`#simulator?service=${encodeURIComponent(currentService.title)}`}
+                      href="#simulator"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        localStorage.setItem('selectedService', currentService.title);
+                        document.querySelector('#simulator')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
                       className={`inline-flex items-center space-x-2 transition-colors font-bold text-sm cursor-pointer ${getThemeClasses(currentService.category).link}`}
                     >
                       <span>Simular este escopo para sua empresa</span>

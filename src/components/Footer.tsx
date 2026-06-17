@@ -1,4 +1,4 @@
-import { ShieldCheck, Mail, Phone, MapPin, Network, ExternalLink } from 'lucide-react';
+import { ShieldCheck, Mail, Phone, Network, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -54,10 +54,6 @@ export default function Footer() {
               <li className="flex items-start space-x-2.5">
                 <Mail className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
                 <span className="hover:text-slate-800 transition-colors font-medium select-all">contato@limasit.com.br</span>
-              </li>
-              <li className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-                <span className="font-medium">Av. Paulista, 1000 - Bela Vista, São Paulo - SP, Brasil</span>
               </li>
             </ul>
           </div>
