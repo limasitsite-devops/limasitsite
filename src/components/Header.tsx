@@ -23,7 +23,7 @@ export default function Header({ onAdminToggle, isAdminOpen }: HeaderProps) {
     { name: 'Início', href: '#home' },
     { name: 'Parceiros', href: '#partners' },
     { name: 'Soluções', href: '#services' },
-    { name: 'Orçamento Inteligente', href: '#simulator' },
+    { name: 'Orçamento', href: '#simulator' },
   ];
 
   const handleLinkClick = (href: string) => {
