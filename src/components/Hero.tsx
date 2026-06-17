@@ -77,7 +77,7 @@ export default function Hero() {
               variants={itemVariants}
               className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 w-full max-w-lg"
             >
-              <div>
+              <div className="hidden sm:block">
                 <p className="text-2xl font-black text-slate-900 font-display">99.99%</p>
                 <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Uptime de Redes</p>
               </div>
