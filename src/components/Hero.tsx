@@ -75,19 +75,19 @@ export default function Hero() {
             {/* Interactive State Panel (Optimized for fast mobile reading) */}
             <motion.div 
               variants={itemVariants}
-              className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 w-full max-w-lg"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 pt-8 border-t border-slate-200 w-full max-w-lg"
             >
               <div className="hidden sm:block">
                 <p className="text-2xl font-black text-slate-900 font-display">99.99%</p>
-                <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Uptime de Redes</p>
+                <p className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Uptime de Redes</p>
               </div>
               <div>
                 <p className="text-2xl font-black text-slate-900 font-display">24/7</p>
-                <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Monitoramento</p>
+                <p className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Monitoramento</p>
               </div>
               <div>
                 <p className="text-2xl font-black text-slate-900 font-display">11+</p>
-                <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Líderes de Setor</p>
+                <p className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Líderes de Setor</p>
               </div>
             </motion.div>
           </motion.div>
